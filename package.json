@@ -1,0 +1,29 @@
+{
+  "name": "swedish-id-validator",
+  "version": "1.0.0",
+  "description": "A simple npm package for validating Swedish personal identification numbers (personnummer) and organization numbers (organisationsnummer).",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucasros98/swedish-id-validator.git"
+  },
+  "keywords": [
+    "sweden",
+    "id",
+    "personal",
+    "number",
+    "organization",
+    "number",
+    "personnummer",
+    "organisationsnummer"
+  ],
+  "author": "Lucas Rosvall",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lucasros98/swedish-id-validator/issues"
+  },
+  "homepage": "https://github.com/lucasros98/swedish-id-validator#readme"
+}
