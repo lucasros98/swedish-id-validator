@@ -42,6 +42,11 @@ function validateChecksum(number) {
     return sum % 10 === 0
 }
 
+/**
+ * Helper function to validate the date part of a Swedish personal number.
+ * @param {string} number 
+ * @returns 
+ */
 function testDate(number) {
     let datePart = ""
     if (number.length === 10) {
@@ -56,6 +61,11 @@ function testDate(number) {
     return dateIsValid
 }
 
+/**
+ * Helper function to validate the Luhn algorithm of a Swedish personal number.
+ * @param {String} number 
+ * @returns 
+ */
 function teshLuhn(number) {
     //convert to 10 digit number
     if (number.length === 12) {
@@ -75,7 +85,6 @@ function teshLuhn(number) {
   
     return result % 10 === 0;
   }
-
 
 
 /**

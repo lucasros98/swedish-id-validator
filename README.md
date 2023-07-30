@@ -28,13 +28,24 @@ npm install swedish-id-validator
 To use the package, you simply need to import it and then you can call its validation functions.
 
 ```jsx
-const validator = require('swedish-id-validator');
+const Validator = require('swedish-id-validator');
 
-const validPersonalNumber = validator.validatePersonalNumber('123456-7890');
-console.log(validPersonalNumber); // true or false
+const validator = new Validator();
 
-const validOrganizationNumber = validator.validateOrganizationNumber('123456-7890');
-console.log(validOrganizationNumber); // true or false
+// Validate a Swedish personal number
+let result = validator.validatePersonalNumber('850323-3432');
+console.log(result); // Returns true for a valid personal number
+
+result = validator.validatePersonalNumber('801617-5080');
+console.log(result); // Returns false for an invalid personal number
+
+// Validate a Swedish organization number
+result = validator.validateOrgNumber('5560360793');
+console.log(result); // Returns true for a valid organization number
+
+result = validator.validateOrgNumber('1234567890');
+console.log(result); // Returns false for an invalid organization number
+
 
 ```
 

@@ -1,0 +1,23 @@
+# Ignore all test files
+test
+
+# Ignore all documentation files
+docs
+
+# Ignore config files
+.npmrc
+.env
+
+# Ignore the node_modules directory
+node_modules
+
+# Ignore any log files
+*.log
+
+# Ignore all build files
+dist
+
+# Ignore IDE specific settings
+.vscode
+.idea
+*.iml

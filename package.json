@@ -4,7 +4,7 @@
   "description": "A simple npm package for validating Swedish personal identification numbers (personnummer) and organization numbers (organisationsnummer).",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "ava"
   },
   "repository": {
     "type": "git",
@@ -18,7 +18,9 @@
     "organization",
     "number",
     "personnummer",
-    "organisationsnummer"
+    "organisationsnummer",
+    "validator",
+    "validate"
   ],
   "author": "Lucas Rosvall",
   "license": "MIT",
@@ -27,6 +29,7 @@
   },
   "homepage": "https://github.com/lucasros98/swedish-id-validator#readme",
   "dependencies": {
+    "ava": "^5.3.1",
     "dayjs": "^1.11.9"
   }
 }
