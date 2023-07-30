@@ -1,6 +1,6 @@
 {
   "name": "swedish-id-validator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple npm package for validating Swedish personal identification numbers (personnummer) and organization numbers (organisationsnummer).",
   "main": "index.js",
   "scripts": {
