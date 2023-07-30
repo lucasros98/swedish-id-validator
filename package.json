@@ -25,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/lucasros98/swedish-id-validator/issues"
   },
-  "homepage": "https://github.com/lucasros98/swedish-id-validator#readme"
+  "homepage": "https://github.com/lucasros98/swedish-id-validator#readme",
+  "dependencies": {
+    "dayjs": "^1.11.9"
+  }
 }

@@ -1,3 +1,5 @@
+const dayjs = require("dayjs")
+
 /**
  * This file contains the Validator class, which is used to validate Swedish personal numbers and company
  * registration numbers.
@@ -40,16 +42,54 @@ function validateChecksum(number) {
     return sum % 10 === 0
 }
 
+function testDate(number) {
+    let datePart = ""
+    if (number.length === 10) {
+        datePart = number.slice(0, 6)
+    } else if (number.length === 12) {
+        datePart = number.slice(0, 8)
+    }
+
+    const dateFormat = datePart.length === 6 ? 'YYMMDD' : 'YYYYMMDD';
+    const dateIsValid = dayjs(datePart, dateFormat).isValid
+
+    return dateIsValid
+}
+
+function teshLuhn(number) {
+    //convert to 10 digit number
+    if (number.length === 12) {
+      number = number.slice(2, 12);
+    }
+
+    const idNumber = number.replace(/\D/g, "").split("");
+    
+    if (idNumber.length !== 10) {
+      return false;
+    }
+  
+    const result = idNumber
+      .map((c, idx) => (idx % 2 === 0 ? +c * 2 : +c))
+      .map(n => (n > 9 ? n - 9 : n))
+      .reduce((acc, val) => acc + val);
+  
+    return result % 10 === 0;
+  }
+
+
+
 /**
  * Helper function to validate a Swedish personal number.
  * @param {string} number - The personal number to validate.
  */
 function checkPersonalNumber(number) {
     return (
-        // Length must be 10 (without dash)
-        number.length === 10
-        // Validate the last check digit
-
+        // Length must be 10 or 12 digits
+        (number.length === 10 || number.length === 12) &&
+        // Validate the date of birth
+        testDate(number) &&
+        // Validate the check digit (Luhn algorithm)
+        teshLuhn(number)
     )
 }
 
