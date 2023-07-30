@@ -4,13 +4,6 @@ A simple npm package for validating Swedish personal identification numbers (per
 
 ---
 
-### Table of Contents
-
-- **[Installation](https://chat.openai.com/?model=gpt-4#installation)**
-- **[Usage](https://chat.openai.com/?model=gpt-4#usage)**
-
----
-
 ### Installation
 
 To install Swedish ID Validator, use the following npm command:
